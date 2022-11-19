@@ -1,3 +1,9 @@
-export default function PostsPage () {
-    return <h1>Aquí mostramos los posts</h1>
+import ListOfPosts from "./ListOfPosts";
+
+export default async function PostPage({ params }) {
+  return (
+    <section>
+      <ListOfPosts />
+    </section>
+  );
 }
