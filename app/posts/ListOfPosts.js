@@ -2,9 +2,9 @@ import { LikeButton } from "../../components/LikeButton";
 import Link from "next/link";
 
 const fetchPost = () => {
-  return fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
-    res.json()
-  );
+  return fetch("https://jsonplaceholder.typicode.com/posts", {
+    cache: "no-store",
+  }).then((res) => res.json());
 };
 
 export default async function ListOfPosts() {

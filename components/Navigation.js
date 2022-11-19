@@ -13,7 +13,7 @@ const links = [
   {
     label: "Posts",
     route: "/posts",
-  }
+  },
 ];
 
 export function Navigation() {
