@@ -1,4 +1,4 @@
-import { LikeButton } from "../../components/LikeButton";
+import { LikeButton } from "../../../components/LikeButton";
 import Link from "next/link";
 
 const fetchPost = async () => {
