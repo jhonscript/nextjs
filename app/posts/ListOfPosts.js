@@ -1,7 +1,9 @@
 import { LikeButton } from "../../components/LikeButton";
 import Link from "next/link";
 
-const fetchPost = () => {
+const fetchPost = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
   console.log("Fetching POSTS");
   return fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",

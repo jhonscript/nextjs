@@ -1,4 +1,6 @@
-const fetchSinglePost = (id) => {
+const fetchSinglePost = async (id) => {
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
   console.log(`Fetching SINGLE POSTS ${id}`);
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     cache: "no-store",

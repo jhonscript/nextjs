@@ -1,4 +1,6 @@
-const fetchComments = (id) => {
+const fetchComments = async (id) => {
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   console.log(`Fetching COMMENTS SINGLE POSTS ${id}`);
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
     cache: "no-store",
