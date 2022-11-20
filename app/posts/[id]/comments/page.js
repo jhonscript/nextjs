@@ -1,4 +1,8 @@
 const fetchComments = async (id) => {
+  const randomValue = Math.round(Math.random());
+
+  if (!randomValue) throw new Error("The value of randomValue is equal to 0");
+
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   console.log(`Fetching COMMENTS SINGLE POSTS ${id}`);
