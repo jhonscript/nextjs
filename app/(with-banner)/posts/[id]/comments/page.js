@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const fetchComments = async (id) => {
   const randomValue = Math.round(Math.random());
 
@@ -19,6 +21,12 @@ export default async function Comment({ params }) {
       {comments.slice(0, 5).map((comment) => {
         return (
           <li key={comment.id}>
+            <Image
+              width="50"
+              height="50"
+              alt={comment.name}
+              src={`https://avatars.dicebear.com/api/adventurer/${comment.email}.svg`}
+            />
             <h4>{comment.name}</h4>
             <small>{comment.email}</small>
             <p>{comment.body}</p>
